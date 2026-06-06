@@ -67,7 +67,7 @@ app.command("/cpo-knock", async ({ command, ack, respond }) => {
 
     setTimeout(async () => {
         await respond({
-            text: `💥 **SWIPE.** ${target} has been knocked off the table. It is now shattered on the floor. Look what you made me do.`,
+            text: `**SWIPE.** ${target} has been knocked off the table. It is now shattered on the floor. Look what you made me do.`,
             response_type: "in_channel"
         });
     }, 3000);
@@ -77,27 +77,27 @@ app.command("/cpo-explode", async ({ command, ack, respond }) => {
     const target = command.text || `<@${command.user_id}>`;
 
     await respond({
-        text: `🐱 *The Chief Purr-officer approaches ${target} while purring softly...*`,
+        text: `*The Chief Purr-officer approaches ${target} while purring softly...*`,
         response_type: "in_channel"
     });
 
     setTimeout(async () => {
         await respond({
-            text: `⚠️ *CRITICAL ERROR: OVERSTIMULATION DETECTED.* The tail begins to twitch violently. The purring sounds like a ticking time bomb.`,
+            text: `*CRITICAL ERROR: OVERSTIMULATION DETECTED.* The tail begins to twitch violently. The purring sounds like a ticking time bomb.`,
             response_type: "in_channel"
         });
     }, 1800);
 
     setTimeout(async () => {
         await respond({
-            text: `😾 *HIIIIISSSSSSSSSCCCHHHHHHH—*`,
+            text: `*HIIIIISSSSSSSSSCCCHHHHHHH—*`,
             response_type: "in_channel"
         });
     }, 3500);
 
     setTimeout(async () => {
         await respond({
-            text: `💥 **KABOOM!** The Chief has absolutely detonated. ${target} is covered in flying fur, structural smoke, and pure unadulterated feline rage. Reverting to liquid state.`,
+            text: ` **KABOOM!** The Chief has absolutely detonated. ${target} is covered in flying fur, structural smoke, and pure unadulterated feline rage. Reverting to liquid state.`,
             response_type: "in_channel"
         });
     }, 5000);
