@@ -84,24 +84,6 @@ app.command("/cpo-explode", async ({ command, ack, say }) => {
     }, 5000);
 });
 
-app.message(/(code|server|laptop|keyboard|working|deadline|pushed|build)/i, async ({ message, say }) => {
-
-    if (Math.random() < 0.15) {
-
-        const keys = "asdfghjkl;;;;;fffffvvvvvbbbbnnnnm";
-        let mash = "";
-        for (let i = 0; i < 28; i++) {
-            mash += keys.charAt(Math.floor(Math.random() * keys.length));
-        }
-
-        await say(`\`${mash}\``);
-
-        setTimeout(async () => {
-            await say(`_“Apologies, humans. His Royal Highness was taking a shortcut across the warm keyboard to get to the sunny spot on the desk.”_ ☀️`);
-        }, 1200);
-    }
-});
-
 (async () => {
     await app.start();
     console.log("⚡️ His Royal Highness, the Chief Purr-officer, has awakened!");
