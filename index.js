@@ -49,41 +49,59 @@ app.command("/cpo-joke", async ({ ack, respond }) => {
     }
 });
 
-app.command("/cpo-knock", async ({ command, ack, say }) => {
+app.command("/cpo-knock", async ({ command, ack, respond }) => {
     await ack();
     const target = command.text || "this channel's productivity";
 
-    await say(`_stares directly into your eyes_`);
+    await respond({
+        text: `_stares directly into your eyes_`,
+        response_type: "in_channel"
+    });
 
     setTimeout(async () => {
-        await say(`_slowly extends paw towards ${target}_`);
+        await respond({
+            text: `_slowly extends paw towards ${target}_`,
+            response_type: "in_channel"
+        });
     }, 1500);
 
     setTimeout(async () => {
-        await say(`💥 **SWIPE.** ${target} has been knocked off the table. It is now shattered on the floor. Look what you made me do.`);
+        await respond({
+            text: `💥 **SWIPE.** ${target} has been knocked off the table. It is now shattered on the floor. Look what you made me do.`,
+            response_type: "in_channel"
+        });
     }, 3000);
 });
-
-app.command("/cpo-explode", async ({ command, ack, say }) => {
+app.command("/cpo-explode", async ({ command, ack, respond }) => {
     await ack();
-
     const target = command.text || `<@${command.user_id}>`;
 
-    await say(`🐱 *The Chief Purr-officer approaches ${target} while purring softly...*`);
+    await respond({
+        text: `🐱 *The Chief Purr-officer approaches ${target} while purring softly...*`,
+        response_type: "in_channel"
+    });
 
     setTimeout(async () => {
-        await say(`⚠️ *CRITICAL ERROR: OVERSTIMULATION DETECTED.* The tail begins to twitch violently. The purring sounds like a ticking time bomb.`);
+        await respond({
+            text: `⚠️ *CRITICAL ERROR: OVERSTIMULATION DETECTED.* The tail begins to twitch violently. The purring sounds like a ticking time bomb.`,
+            response_type: "in_channel"
+        });
     }, 1800);
 
     setTimeout(async () => {
-        await say(`😾 *HIIIIISSSSSSSSSSSSSS—*`);
+        await respond({
+            text: `😾 *HIIIIISSSSSSSSSCCCHHHHHHH—*`,
+            response_type: "in_channel"
+        });
     }, 3500);
 
     setTimeout(async () => {
-        await say(`💥 **KABOOM!** The Chief has absolutely detonated. ${target} is covered in flying fur, structural smoke, and pure unadulterated feline rage. Reverting to liquid state.`);
+        await respond({
+            text: `💥 **KABOOM!** The Chief has absolutely detonated. ${target} is covered in flying fur, structural smoke, and pure unadulterated feline rage. Reverting to liquid state.`,
+            response_type: "in_channel"
+        });
     }, 5000);
 });
-
 (async () => {
     await app.start();
     console.log("⚡️ His Royal Highness, the Chief Purr-officer, has awakened!");
