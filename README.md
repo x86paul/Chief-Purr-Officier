@@ -6,3 +6,7 @@ The ultimate workspace companion deployed to assert feline dominance, monitor la
 /cpo-catfact – Dispenses essential trivia and truth bombs straight from the feline empire.
 
 /cpo-joke – Generates standard-issue human humor to keep office morale high.
+
+/cpo-knock - Knocks somthing valuable off the table
+
+/cpo-explode - The Chief overstimulates and detonates
